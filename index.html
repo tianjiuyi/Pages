@@ -12,12 +12,17 @@
         使用dynv6动态域名解析服务，配置域名解析到本地服务器。
         <ul>
             <li>
-                获取本机IPv6地址：<br>
+                获取本机IPv6地址<br>
                 <code>
                     curl https://ipv6.ddnspod.com
                 </code>
-                
-
+            </li>
+            <li>
+                将本机IPv6地址更新到dyn6服务器<br>
+                <code>
+                    curl 'http://dynv6.com/api/update?hostname=<域名>&token=<令牌>&ipv6='$(curl --silent https://ipv6.ddnspod.com)
+                    curl 'http://dynv6.com/api/update?hostname=ttsoft.dns.army&token=Aig3zJwMkJHY8moPis6sJxp7pxeC2o&ipv6='$(curl --silent https://ipv6.ddnspod.com)
+                </code>
             </li>
         </ul>
 
